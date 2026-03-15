@@ -15,6 +15,8 @@ app.post("/scan", async (req, res) => {
 
     const url = `https://api.dexscreener.com/latest/dex/tokens/${address}`
 
+    console.log(url)
+
     const response = await axios.get(url)
 
     const pair = response.data.pairs[0]
